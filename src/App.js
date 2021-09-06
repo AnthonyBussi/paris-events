@@ -1,29 +1,19 @@
 import Navbar from './components/Navbar';
 import Home from './views/Home';
-import Search from './views/Search';
+import List from './views/List';
+import Favorites from './views/Favorites';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+  return (    
+    <Router>
       <Navbar />
-      <Home />
-      <Search />
-    </div>
+      <Route path='/' component={Home} exact />
+      <Route path='/list' component={List} />
+      <Route path='/favorites' component={Favorites} />
+    </Router>
   );
 }
 
