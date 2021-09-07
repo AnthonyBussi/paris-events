@@ -1,11 +1,18 @@
 import React from 'react';
+import Card from '../components/Card';
+import Navbar from '../components/Navbar';
 
 const Favorites = () => {
 
     return (
-        <div className="favorites">
-            <h1>Elements sauvegardés</h1>
-            <p>Aucun évènement n'a été sauvegardés</p>
+        <div className="favorites page">
+            <Navbar />
+            <main>
+                <h1>Elements sauvegardés</h1>
+                <p>Aucun évènement n'a été sauvegardés</p>
+
+                <Card />
+            </main>
         </div>
     );
 };

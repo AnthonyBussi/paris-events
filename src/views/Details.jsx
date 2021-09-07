@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
 
 class Details extends React.Component {
     loadEvent() {
@@ -8,10 +9,13 @@ class Details extends React.Component {
     }
     render() {
         return (
-            <div className="event page">
-                <h1>Détail</h1>
-                <p>Détail d'un évènement</p>
-                <button onClick={() => { this.loadEvent() }}>Charger les évènements</button>
+            <div className="details page">
+                <Navbar />
+                <main>
+                    <h1>Détail</h1>
+                    <p>Détail d'un évènement</p>
+                    <button onClick={() => { this.loadEvent() }}>Charger les évènements</button>
+                </main>
             </div>
 
         );
