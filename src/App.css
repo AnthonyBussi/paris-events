@@ -1,24 +1,12 @@
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 80px;
-  background-color: lightgray;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.navbar a, .navbar a:visited {
-  color: white;
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: ease .3s;
-}
 
-.navbar a:hover {
-  border-bottom: 1px solid black;
-}
-
-.home {
-  max-width: 80%;
-  margin: auto;
-  text-align: center;
-}
+.page {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+  }

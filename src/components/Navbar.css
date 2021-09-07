@@ -1,0 +1,36 @@
+nav {
+    padding: 20px;
+    background-color: #57A773;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+  
+nav li {
+color: white;
+font-weight: bold;
+list-style-type: none;
+padding: 6px 12px;
+border-radius: 3px;
+transition: ease .3s;
+}
+
+nav li:first-of-type {
+    flex: 1;
+}
+
+nav li a, nav li a:visited {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    transition: ease .3s;
+  }
+
+nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
