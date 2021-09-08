@@ -9,12 +9,17 @@
     font-weight: bold;
 }
 
+.card .event-img {
+    width: 80%;
+    margin: auto;
+}
+
 .card .event-place {
     font-size: 14px;
     font-style: italic;
 }
 
-.card .event-desc {
+.card .event-category, .card .event-desc {
     font-size: 12px;
 }
 

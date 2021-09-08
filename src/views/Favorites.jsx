@@ -11,7 +11,6 @@ const Favorites = () => {
                 <h1>Elements sauvegardés</h1>
                 <p>Aucun évènement n'a été sauvegardés</p>
 
-                <Card />
             </main>
         </div>
     );
