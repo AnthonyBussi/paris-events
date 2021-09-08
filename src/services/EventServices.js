@@ -1,17 +1,18 @@
-// import axios from 'axios';
+import axios from 'axios';
 
-// const EventService = {
-//     // Récupérer le tableau des collaborateur depuis le serveur
-//     fetchAll(mySearch) {
-//         return axios
-//             .get(`https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?search=${mySearch}&sort=title`)
-//             .then((response) => response.data.records)
-//             .catch(errorHandler);
-//     },
-// };
+const API_CALL = 'https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records';
 
-// const errorHandler = (err) => {
-//     console.log(err);
-// };
+const EventService = {
+    fetchAll(search) {
+        return axios
+            .get(`${API_CALL}?search=${search}&sort=title`)
+            .then((response) => response.data.records)
+            .catch(errorHandler);
+    }
+};
 
-// export default EventService;
+const errorHandler = (err) => {
+    console.log(err);
+};
+
+export default EventService;

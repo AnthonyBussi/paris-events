@@ -4,7 +4,7 @@ import './List.css';
 
 class List extends React.Component {
     loadEvent() {
-        fetch('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=&rows=3&sort=date_start').then(response => response.json()).then(result => {
+        fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?order_by=date_start%20asc&limit=1&pretty=false&timezone=UTC').then(response => response.json()).then(result => {
             console.log(result.records);
         })
     }
@@ -21,7 +21,6 @@ class List extends React.Component {
                     </div>
                 </main>
             </div>
-
         );
     }
 };

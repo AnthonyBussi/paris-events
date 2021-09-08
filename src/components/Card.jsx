@@ -1,15 +1,18 @@
 import React from 'react';
 import './Card.css';
 
-const Card = () => {
+function Card({ toto }) {
     return (
         <div className="card">
-            {/* <img src="" alt="" /> */}
-            <p className="event-title">Nom de l'évènement</p>
-            <p className="event-place">Date et heure</p>
-            <p className="event-desc">Description de l'évènement</p>
+            <p className="event-title"> {toto.title}</p>
+            <p className="event-place"> {toto.date_start}</p>
+            <p className="event-desc"> {toto.description}</p>
+            <button>Mettre en Favoris</button>
+            <button >Retirer en Favoris</button>
         </div>
     );
-};
+}
+
+
 
 export default Card;
