@@ -22,6 +22,7 @@
 .home-info p {
     text-transform: uppercase;
     font-family: 'Urbanist', sans-serif;
+    font-weight: bold;
     text-align: center;    
 }
 
@@ -42,11 +43,11 @@
     .home-container {
         flex-direction: column;
         text-align: center;
-        margin-top: 24px;
+        margin-top: 0px;
     }
     
     .home-title {
-        font-size: 96px;
+        font-size: 72px;
         margin-bottom: 12px;
     }
 
