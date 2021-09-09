@@ -6,23 +6,29 @@
     font-family: 'Urbanist', sans-serif;
 }
 
-.search-searchbar input, .search-searchbar .search-btn {
+.search-container form {
+    margin: 12px 0 48px;
+}
+
+.search-container input, .search-container .search-btn {
     font-size: 16px;
     padding: 6px 12px;
 }
 
-.search-searchbar input {
+.search-container input {
     width: 500px;
 }
 
-.search-searchbar .search-btn {
+.search-container .search-btn {
     cursor: pointer;
     margin-left: 12px;
 }
 
 
-.search-result {
-    border: 1px solid red;
-    margin: .5rem 1rem;
-    padding: .5rem;
+.search-result-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 36px 0;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.5);
 }

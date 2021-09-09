@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
+import Card from '../components/Card';
 import './Search.css';
 
 function Search() {
@@ -8,12 +9,12 @@ function Search() {
     const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
-        fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records')
+        fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?limit=12')
             .then(response => response.json())
             .then(result => setDatas(result.records))
     }, []); // fin useEffect
 
-    // console.log(datas);
+    console.log(datas);
 
     const handleSearchTerm = (e) => {
         let value = e.target.value;
@@ -35,27 +36,22 @@ function Search() {
             <Navbar />
             <main>
                 <h1 className="search-title">Evenements à venir</h1>
-                <div className="search-searchbar">
-                    <input type="text"
-                        name="search-searchbar"
-                        id="search-searchbar"
-                        placeholder="Rechercher un évènement"
-                        onInput={handleSearchTerm}
-                    />
-                    <button type="button" name="search-btn" className="search-btn" onClick={showResult}>Rechercher</button>
-                    {/*  <div className="search-results">
-                        {datas.filter((val) => {
-                            return val.title.toLowerCase().includes(searchTerm.toLowerCase());
-                        }) 
-                        {datas
-                        .map((val) => {
-                            return (
-                                <div className="search-result" key={val.id}>
-                                    {val.title}
-                                </div>
-                            )
-                        })}
-                    </div>*/}
+                <div className="search-container">
+                    <form>
+                        <input type="text"
+                            name="search-searchbar"
+                            id="search-searchbar"
+                            placeholder="Rechercher un évènement"
+                            onInput={handleSearchTerm}
+                        />
+                        <button type="button" name="search-btn" className="search-btn" onClick={showResult}>Rechercher</button>
+                    </form>
+                    <div className="search-result-container">
+                        { datas && datas.map((event) => (
+                            <Card key={ event.record.id } id={ event.record.id } dataEvent={ event.record.fields } />
+                        ))}
+
+                    </div>
                 </div>
             </main>
         </div>

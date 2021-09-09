@@ -35,7 +35,8 @@
 
 .home-event > p {
     text-transform: uppercase;
-    font-family: 'Urbanist', sans-serif;    
+    font-family: 'Urbanist', sans-serif;
+    font-size: 32px;   
     margin-bottom: 24px;
 }
 
