@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100&display=swap');
+
+.search-title {
+    font-size: 96px;
+    text-transform: uppercase;
+    font-family: 'Urbanist', sans-serif;
+}
+
+.search-searchbar input, .search-searchbar .search-btn {
+    font-size: 16px;
+    padding: 6px 12px;
+}
+
+.search-searchbar input {
+    width: 500px;
+}
+
+.search-searchbar .search-btn {
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+
+.search-result {
+    border: 1px solid red;
+    margin: .5rem 1rem;
+    padding: .5rem;
+}

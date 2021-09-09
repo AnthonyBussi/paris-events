@@ -1,5 +1,5 @@
 import Home from './views/Home';
-import List from './views/List';
+import Search from './views/Search';
 import Favorites from './views/Favorites';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -9,8 +9,8 @@ function App() {
   return (    
     <Router>
       <Route path='/' component={Home} exact />
-      <Route path='/rechercher' component={List} />
-      <Route path='/favoris' component={Favorites} />
+      <Route path='/rechercher' component={ Search } />
+      <Route path='/favoris' component={ Favorites } />
     </Router>
   );
 }
