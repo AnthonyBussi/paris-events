@@ -8,28 +8,21 @@ function Search() {
     const [datas, setDatas] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    useEffect(() => {
-        fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?limit=12')
-            .then(response => response.json())
-            .then(result => setDatas(result.records))
-    }, []); // fin useEffect
-
-    console.log(datas);
+    const URL = "https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?limit=12&search=";
 
     const handleSearchTerm = (e) => {
         let value = e.target.value;
         setSearchTerm(value);
-    }
+    }    
+    
 
-    const showResult = () => {
-        fetch(`https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?search=${searchTerm}`)
-            .then((response) => response.json())
-            .then((result) => {
-                setSearchTerm(result.records);
-                console.log(result.records);
-            })
-    }
-    // console.log(searchTerm);
+    useEffect(() => {
+        fetch(URL+searchTerm)
+            .then(response => response.json())
+            .then(result => setDatas(result.records))
+    }, [searchTerm]); // fin useEffect
+
+    // console.log(datas);
 
     return (
         <div className="list-event page">
@@ -44,13 +37,12 @@ function Search() {
                             placeholder="Rechercher un évènement"
                             onInput={handleSearchTerm}
                         />
-                        <button type="button" name="search-btn" className="search-btn" onClick={showResult}>Rechercher</button>
+                        <button type="button" name="search-btn" className="search-btn">Rechercher</button>
                     </form>
                     <div className="search-result-container">
                         { datas && datas.map((event) => (
                             <Card key={ event.record.id } id={ event.record.id } dataEvent={ event.record.fields } />
                         ))}
-
                     </div>
                 </div>
             </main>
