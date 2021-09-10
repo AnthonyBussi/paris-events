@@ -3,7 +3,9 @@
 .modal {
     background-color: rgba(28, 38, 74, 0.9);
     border-radius: 6px;
-    width: 800px;
+    max-width: 1200px;
+    height: 600px;
+    overflow-y: scroll;
     margin: auto;
     position: absolute;
     top: 50%;
@@ -14,17 +16,20 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.cross {
+.cross img {
     cursor: pointer;
     position: absolute;
-    top: 6px;
+    top: 12px;
     right: 12px;
     opacity: 0.5;
     transition: ease .3s;
+    width: 30px;
+    background-color: white;
+    border-radius: 3px;
 }
 
-.cross:hover {
-    opacity: 1;
+.cross img:hover {
+    opacity: 0.8;
 }
 
 .modal p {
@@ -37,8 +42,20 @@
 }
 
 .modal-img {
-    width: 50%;
+    width: 200px;;
     margin: 12px 0;
+}
+
+.modal .modal-desc .component-image img {
+    width: 100px;
+}
+
+.modal .modal-desc ul {
+    list-style-type: none;
+}
+
+.modal .modal-desc a {
+    color: #fff;
 }
 
 .modal-adress {
@@ -56,28 +73,36 @@
 
 .modal-contact a {
     text-decoration: none;
+    color: #fff;
 }
 
 .modal-contact a:visited {
     color: #fff;
 }
 
-.modal button {
-    margin-top: 12px;
-    padding: 4px 8px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: ease .3s;
-}
-
-.modal button:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+.modal .fav-button {
+    width: 30px;
+    height: 30px;
 }
 
 @media all and (max-width: 1024px) {
     .modal {
         width: 80%;
     }
+}
+
+
+
+/* Style de la scrollbar présente sur la modale */
+.modal::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal::-webkit-scrollbar-track {
+    background: none;
+}
+
+.modal::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
 }
