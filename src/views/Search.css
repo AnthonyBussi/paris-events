@@ -8,6 +8,7 @@
 
 .search-container form {
     margin: 12px 0 48px;
+    text-align: center;
 }
 
 .search-container input, .search-container .search-btn {
@@ -16,7 +17,8 @@
 }
 
 .search-container input {
-    width: 500px;
+    width: 50%;
+    text-align: center
 }
 
 .search-container .search-btn {
