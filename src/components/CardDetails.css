@@ -41,6 +41,11 @@
     text-transform: uppercase;
 }
 
+.modal-subtitle {
+    font-weight: bold;
+    margin-top: 24px;
+}
+
 .modal-img {
     width: 200px;;
     margin: 12px 0;
@@ -63,9 +68,6 @@
     flex-direction: column;
 }
 
-.modal-price {
-    font-style: italic;
-}
 
 .modal-access {
     font-size: 14px;
