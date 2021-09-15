@@ -15,6 +15,8 @@ const Search = () => {
     
     const [displayModal, setDisplayModal] = useState(false);
 
+
+    // On récupère la donnée saisie par l'utilisateur
     const handleSearchTerm = (e) => {
         let value = e.target.value;
         setSearchTerm(value);

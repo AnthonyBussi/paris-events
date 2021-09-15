@@ -10,11 +10,11 @@ function Home() {
     const [event_id, setEvent_id] = useState(null);
     const [displayModal, setDisplayModal] = useState(false);
 
+    // on récupère le dernier événement
     useEffect(() => {
         fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?order_by=date_end%20asc&pretty=false&timezone=UTC')
             .then(response => response.json())
             .then(result => {
-                console.log(result.records[0].record.fields);
                 const event_id_ = result.records[0].record.id;
                 const event_ = result.records[0].record.fields;
                 setEvent_id(event_id_);
