@@ -42,7 +42,7 @@ function Home() {
                     <p>Evènement à la une</p>
                     {/* Si event_ existe, on affiche le composant event_ */}
                     {event_ && <Card dataEvent={event_} onOpenModal={openModal} />}
-                    {displayModal && <CardDetails dataEvent={event_id, event_} onCloseModal={closeModal} />}
+                    {/* {displayModal && <CardDetails dataEvent={event_id, event_} onCloseModal={closeModal} />} */}
                 </div>
             </main>
         </div>

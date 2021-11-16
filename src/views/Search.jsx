@@ -63,7 +63,7 @@ const Search = () => {
                              <Card key={event.record.id} id={event.record.id} dataEvent={event.record.fields} onOpenModal={openModal} />
                          ))}
 
-                         {displayModal && <CardDetails dataEvent={event_id, event_} onCloseModal={closeModal} />}
+                         {/* {displayModal && <CardDetails dataEvent={event_id, event_} onCloseModal={closeModal} />} */}
                      </div>
                  </section>
              </main>
