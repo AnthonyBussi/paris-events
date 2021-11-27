@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.data {
+    background-color: rgba(28, 38, 74, 0.6);
+    padding: 24px;
+    border-radius: 6px;
+    height: calc(100vh - 120px);
+    overflow-y: scroll;
+}
+
+.event p {
+    margin-bottom: 12px;
+}
+
+.event-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.event-subtitle {
+    font-weight: bold;
+    margin-top: 24px;
+}
+
+.event-img {
+    width: 200px;;
+    margin: 12px 0;
+}
+
+.event .event-desc .component-image img {
+    width: 100px;
+}
+
+.event .event-desc ul {
+    list-style-type: none;
+}
+
+.event .event-desc a {
+    color: #fff;
+}
+
+.event-adress {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-access {
+    font-size: 14px;
+}
+
+.event-contact a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.event-contact a:visited {
+    color: #fff;
+}
+
+.event .fav-button {
+    width: 30px;
+    height: 30px;
+}
+
+@media all and (max-width: 1024px) {
+    .event {
+        width: 80%;
+    }
+}
+
+/* Style de la scrollbar */
+.data::-webkit-scrollbar {
+    width: 6px;
+}
+
+.data::-webkit-scrollbar-track {
+    background: none;
+}
+
+.data::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+}

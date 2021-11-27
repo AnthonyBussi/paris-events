@@ -44,6 +44,11 @@
 .card .event-details {
     font-style: italic;
     cursor: pointer;
+    color: white;
+}
+
+.card .event-detail-link {
+    text-decoration: none;
 }
 
 .home .card {
