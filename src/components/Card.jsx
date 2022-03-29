@@ -7,11 +7,12 @@ import EventServices from '../services/EventServices';
 const Card = ({ dataEvent, eventId }) => {
 
     // const {title, category, date_start} = dataEvent;
+    console.log(dataEvent);
 
     return (
         <div className="card">
             <p className="event-title" dangerouslySetInnerHTML={{ __html: dataEvent.title }}></p>
-            <img src={ dataEvent.cover.url } alt={ dataEvent.cover_alt } className="event-img" />
+            <img src={ dataEvent.cover_url } alt={ dataEvent.cover_alt } className="event-img" />
             <p className="event-category">{ dataEvent.category }</p>
             <p className="event-place">{EventServices.DateForm(dataEvent.date_start)}</p>
             <img src={ Heart } alt="Icone de favoris" />
