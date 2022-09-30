@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Card.css';
-import Heart from '../assets/heart.svg';
+// import Heart from '../assets/heart.svg';
 import EventServices from '../services/EventServices';
 
 const Card = ({ dataEvent, eventId }) => {

@@ -1,6 +1,6 @@
 import Home from './views/Home';
 import Search from './views/Search';
-import Favorites from './views/Favorites';
+// import Favorites from './views/Favorites';
 import Event from './views/Event';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 

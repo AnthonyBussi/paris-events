@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import Heart from '../assets/heart.svg';
+// import Heart from '../assets/heart.svg';
 
 import './Event.css';
 
