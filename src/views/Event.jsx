@@ -15,7 +15,7 @@ const Event = () => {
             .then(response => response.json())
             .then(response =>  setEventData(response.record.fields)
             ) //Fin fetch et then
-    }, []) // fin useEffect
+    }, [id]) // fin useEffect
 
     
 
