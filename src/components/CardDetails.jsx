@@ -21,7 +21,7 @@ function CardDetails({ dataEvent, onCloseModal }) {
             <p className="modal-access">{ dataEvent.transport }</p>
             <p className="modal-subtitle">Pour plus d'infos</p>
             <p className="modal-contact">{ dataEvent.contact_phone } - { dataEvent.contact_mail } - <a href={ dataEvent.contact_facebook }>Page Facebook</a></p>
-            <img src={Heart} alt="Icone de favoris" className="fav-button" />
+            {/* <img src={Heart} alt="Icone de favoris" className="fav-button" /> */}
         </div>
     )
 }

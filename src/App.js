@@ -16,7 +16,7 @@ function App() {
                     <Route path='/rechercher' element={ <Search/> } />
                     <Route path='/evenement/:id' element={ <Event/> } />
                     <Route path="/rechercher/evenement/:id" element={ <Event/> } />
-                    <Route path='/favoris' element={ <Favorites/> } />
+                    {/* <Route path='/favoris' element={ <Favorites/> } /> */}
                 </Routes>
             </BrowserRouter>  
     );

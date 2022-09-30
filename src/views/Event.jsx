@@ -36,7 +36,7 @@ const Event = () => {
                     <p className="event-access">{ eventData.transport }</p>
                     <p className="event-subtitle">Pour plus d'infos</p>
                     <p className="event-contact">{ eventData.contact_phone } - { eventData.contact_mail } - <a href={ eventData.contact_facebook }>Page Facebook</a></p>
-                    <img src={Heart} alt="Icone de favoris" className="fav-button" />
+                    {/* <img src={Heart} alt="Icone de favoris" className="fav-button" /> */}
                 </div>
             </div>
         </main>

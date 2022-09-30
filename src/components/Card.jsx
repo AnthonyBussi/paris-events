@@ -15,7 +15,7 @@ const Card = ({ dataEvent, eventId }) => {
             <img src={ dataEvent.cover_url } alt={ dataEvent.cover_alt } className="event-img" />
             <p className="event-category">{ dataEvent.category }</p>
             <p className="event-place">{EventServices.DateForm(dataEvent.date_start)}</p>
-            <img src={ Heart } alt="Icone de favoris" />
+            {/* <img src={ Heart } alt="Icone de favoris" /> */}
             <Link to={`evenement/${eventId}`} className="event-detail-link">
                 <p className="event-details">Voir en détails</p>
             </Link>

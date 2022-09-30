@@ -16,11 +16,11 @@ const Navbar = () => {
                         Liste des évènements
                     </NavLink>
                 </li>
-                <li>
+                {/* <li>
                     <NavLink to='/favoris'>
                         Favoris
                     </NavLink>
-                </li>
+                </li> */}
             </ul>
 
 
