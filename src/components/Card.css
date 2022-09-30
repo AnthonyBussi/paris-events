@@ -59,3 +59,9 @@
     height: 400px;
     padding: 32px;
 }
+
+@media all and (max-width: 600px) {
+    .home .card {
+        width: 100%;
+    }
+}

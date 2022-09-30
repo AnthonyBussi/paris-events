@@ -5,6 +5,7 @@
     padding: 24px;
     border-radius: 6px;
     height: calc(100vh - 120px);
+    text-align: justify;
     overflow-y: scroll;
 }
 
@@ -62,11 +63,11 @@
     height: 30px;
 }
 
-@media all and (max-width: 1024px) {
+/* @media all and (max-width: 1024px) {
     .event {
         width: 80%;
     }
-}
+} */
 
 /* Style de la scrollbar */
 .data::-webkit-scrollbar {
